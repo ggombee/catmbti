@@ -1,17 +1,18 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 const { Kakao } = window;
 
 const KakaoShareButton = () => {
-  const url = "https://catmbti10.netlify.app";
+  const url = "https://catmbti10.netlify.app/"
   const resultUrl = window.location.href;
 
+  console.log('ddd', resultUrl, url)
 
   React.useEffect(() => {
-    Kakao.init("e35735ee414c29324ef4f589c4f00f2a");
-  })
+    Kakao.init("ff6f6e75da115d029f47399905c8921f");
+  }, []);
 
-  const KakaoShare = () => {
+  const shareKakao = () => {
     Kakao.Link.sendDefault({
       objectType: 'feed',
       content: {
@@ -77,9 +78,12 @@ const KakaoShareButton = () => {
     });
   }
 
+
   return (
-    <Button onClick={KakaoShare} style={{ fontFamily: "SimKyungha", width: 170, marginLeft: '20px' }}>
+    <Button onClick={shareKakao} style={{ fontFamily: "SimKyungha", width: 170, marginLeft: '20px' }} >
       카카오톡 공유하기
-    </Button>)
+    </Button>
+  )
 }
 
+export default KakaoShareButton;

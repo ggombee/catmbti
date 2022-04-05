@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 import { ResultData } from '../assets/data/resultdata';
 import { useSearchParams, useNavigate } from 'react-router-dom';
+import KakaoShareButton from '../component/KakaoShareButton';
 
 const Result = () => {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const Result = () => {
           <Button style={{ fontFamily: "SimKyungha", width: 170 }} onClick={() => navigate("/")}>
             테스트 다시하기
           </Button>
-
+          <KakaoShareButton />
         </ButtonGroup>
       </Contents>
     </Wrapper >
