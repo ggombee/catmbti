@@ -26,7 +26,7 @@ const Result = () => {
       <Contents>
         <Title>결과 보기</Title>
         <LogoImage>
-          <img src={resultData.image} className="rounded-circle" width={350} height={350} />
+          <img alt="결과이미지" src={resultData.image} className="rounded-circle" width={350} height={350} />
         </LogoImage>
         <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Desc>
         <Button style={{ fontFamily: "SimKyungha" }} onClick={() => navigate("/")}>
@@ -63,7 +63,6 @@ const Title = styled.div`
   font-size: 30pt;
   margin-top: 40px;
   font-family: "SimKyungha";
-
 `
 
 const LogoImage = styled.div`
