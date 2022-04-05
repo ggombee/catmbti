@@ -18,7 +18,6 @@ const Result = () => {
     setResultData(result);
   }, [mbti])
 
-  console.log(resultData);
 
   return (
     <Wrapper>
@@ -29,9 +28,12 @@ const Result = () => {
           <img alt="결과이미지" src={resultData.image} className="rounded-circle" width={350} height={350} />
         </LogoImage>
         <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Desc>
-        <Button style={{ fontFamily: "SimKyungha" }} onClick={() => navigate("/")}>
-          테스트 다시하기
-        </Button>
+        <ButtonGroup>
+          <Button style={{ fontFamily: "SimKyungha", width: 170 }} onClick={() => navigate("/")}>
+            테스트 다시하기
+          </Button>
+
+        </ButtonGroup>
       </Contents>
     </Wrapper >
   )
@@ -74,4 +76,9 @@ const Desc = styled.div`
   margin-top: 20px;
   font-family: "SimKyungha";
 
+`
+
+const ButtonGroup = styled.div`
+  display: flex;
+  flex-direction : row;
 `
