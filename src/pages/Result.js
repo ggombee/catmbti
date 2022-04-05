@@ -33,7 +33,7 @@ const Result = () => {
           <Button style={{ fontFamily: "SimKyungha", width: 170 }} onClick={() => navigate("/")}>
             테스트 다시하기
           </Button>
-          <KakaoShareButton />
+          <KakaoShareButton data={resultData} />
         </ButtonGroup>
       </Contents>
     </Wrapper >
